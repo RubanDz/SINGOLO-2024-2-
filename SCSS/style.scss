@@ -39,7 +39,7 @@ $colorYellow: #EDFF7E;
         display: flex;
         gap: 10px;
         & > button {
-            @include text-styles(400, 1.2rem, 1.2rem, #5A5A7F);
+            @include text-styles(400, 0.8rem, 1.2rem, #5A5A7F);
             border-radius: 4px;
             height: 2.8rem;
             &:hover {
