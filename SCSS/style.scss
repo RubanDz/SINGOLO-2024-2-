@@ -1,0 +1,80 @@
+@import '../assets/font/font';
+@import './reset';
+$colorWhite: #FFFFFF;
+$colorYellow: #EDFF7E;
+@mixin grid-container($columns, $column-size, $rows, $row-size, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, $column-size);
+    grid-template-rows: repeat($rows, $row-size);
+    gap: $gap;
+  }
+  @mixin text-styles($font-weight, $font-size, $line-height, $color) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+  }
+  
+
+
+
+//TODO! section section__portfolio
+.section__portfolio {
+    background: $colorYellow;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+.grid-container {
+    @include grid-container(1, 940px, 3, 40px, 20px);
+    justify-content: center;
+    align-items: center;
+    & > h2 {
+        @include text-styles(900, 3rem, 3.6rem, #000025);
+    }
+    & > p {
+        @include text-styles(400, 1.6rem, 3rem, #5A5A7F);
+    }
+    .button {
+        display: flex;
+        gap: 10px;
+        & > button {
+            @include text-styles(400, 1.2rem, 1.2rem, #5A5A7F);
+            border-radius: 4px;
+            &:hover {
+                background-color: #a3a3be;
+                color: $colorWhite;
+            }
+            &:nth-child(1) {
+                background-color: #7067CF;
+                color: $colorWhite;
+                &:hover {
+                    background-color: #a3a3be
+                }
+            }
+        }
+    }
+}
+          
+               
+
+           
+     
+        
+
+
+
+.grid-container-second {
+    @include grid-container(4, 220px, 3, 187, 20px);
+    justify-content: center;
+    align-items: center;
+    .item__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+ 
