@@ -18,7 +18,7 @@ $colorYellow: #EDFF7E;
 
 
 
-//TODO! section section__portfolio
+//TODO! section__portfolio
 .section__portfolio {
     background: $colorYellow;
     display: flex;
@@ -41,6 +41,7 @@ $colorYellow: #EDFF7E;
         & > button {
             @include text-styles(400, 1.2rem, 1.2rem, #5A5A7F);
             border-radius: 4px;
+            height: 2.8rem;
             &:hover {
                 background-color: #a3a3be;
                 color: $colorWhite;
@@ -67,7 +68,26 @@ $colorYellow: #EDFF7E;
 }
  
 
-@media screen and (max-width: 768px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 850px) {
     .grid-container {
         @include grid-container(1, 696px, 3, 40px, 20px);
     }
@@ -75,7 +95,7 @@ $colorYellow: #EDFF7E;
         @include grid-container(3, 220px, 4, 187, 12px);
     }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
     .grid-container {
         @include grid-container(1, 335px, 3, 40px, 20px);
     }
@@ -84,6 +104,7 @@ $colorYellow: #EDFF7E;
     }
 
 }
+
 
 
 
