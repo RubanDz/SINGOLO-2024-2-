@@ -74,6 +74,7 @@ $colorYellow: #EDFF7E;
         object-fit: cover;
     }
 }
+
    
  
 // TODO! footer grid-container__footer
@@ -117,12 +118,15 @@ $colorYellow: #EDFF7E;
         @include grid-container(1, 696px, 3, 40px, 20px);
     }
     .grid-container-second {
-        @include grid-container(3, 220px, 4, 187, 12px);
+        @include grid-container(3, 220px, 4, 187px, 12px);
     }
     .footer .grid-container__footer {
         @include grid-container(2, 331px, 1, 40px, 20px);
     }
 }
+   
+       
+   
 
    
 
@@ -143,12 +147,19 @@ $colorYellow: #EDFF7E;
         @include grid-container(1, 335px, 3, 40px, 20px);
     }
     .grid-container-second {
-        @include grid-container(2, 161px, 2, 161, 13px);
+        @include grid-container(2, 161px, 6, 161px, 13px);
+        .item__image {
+            width: 161px;
+            height: 161px;
+        }
     }
     .footer .grid-container__footer {
         @include grid-container(2, 157px, 1, 40px, 20px);
     }
 }
+            
+    
+  
        
 
 
