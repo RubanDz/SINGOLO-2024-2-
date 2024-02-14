@@ -2,6 +2,15 @@
 @import './reset';
 $colorWhite: #FFFFFF;
 $colorYellow: #EDFF7E;
+%articleSectionFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+%sectionGrid {
+    justify-content: center;
+    align-items: center; 
+}
 @mixin grid-container($columns, $column-size, $rows, $row-size, $gap) {
     display: grid;
     grid-template-columns: repeat($columns, $column-size);
@@ -13,27 +22,27 @@ $colorYellow: #EDFF7E;
     font-size: $font-size;
     line-height: $line-height;
     color: $color;
-  }
+}
+   
+   
   
 
 
 
-//TODO! section__portfolio
+//TODO! section section__portfolio
 .section__portfolio {
+    @extend %articleSectionFlex;
     background: $colorYellow;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
 }
 .grid-container {
     @include grid-container(1, 940px, 3, 40px, 20px);
-    justify-content: center;
-    align-items: center;
+    @extend %sectionGrid;
     & > h2 {
         @include text-styles(900, 3rem, 3.6rem, #000025);
     }
     & > p {
         @include text-styles(400, 1.6rem, 3rem, #5A5A7F);
+        text-align: justify;
     }
     .button {
         display: flex;
@@ -57,18 +66,34 @@ $colorYellow: #EDFF7E;
     }
 }
 .grid-container-second {
-    @include grid-container(4, 220px, 3, 187, 20px);
-    justify-content: center;
-    align-items: center;
+    @include grid-container(4, 220px, 3, 187px, 20px);
+    @extend %sectionGrid;
     .item__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 }
+   
  
-
-
+// TODO! footer grid-container__footer
+.footer {
+    background-color: $colorYellow;
+    .grid-container__footer {
+        @include grid-container(2, 460px, 1, 40px, 20px);
+        @extend %sectionGrid;
+        .footer__text {
+            @include text-styles(900, 1.3rem, 1.8rem, #5A5A7F);
+        }
+        .flex-container__footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+    }
+}
+   
+    
 
 
 
@@ -94,7 +119,25 @@ $colorYellow: #EDFF7E;
     .grid-container-second {
         @include grid-container(3, 220px, 4, 187, 12px);
     }
+    .footer .grid-container__footer {
+        @include grid-container(2, 331px, 1, 40px, 20px);
+    }
 }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 450px) {
     .grid-container {
         @include grid-container(1, 335px, 3, 40px, 20px);
@@ -102,8 +145,12 @@ $colorYellow: #EDFF7E;
     .grid-container-second {
         @include grid-container(2, 161px, 2, 161, 13px);
     }
-
+    .footer .grid-container__footer {
+        @include grid-container(2, 157px, 1, 40px, 20px);
+    }
 }
+       
+
 
 
 
