@@ -201,7 +201,7 @@ $colorYellow: #EDFF7E;
     background: #7067CF;
     .section__images-elements {
         display: flex;
-        gap: 20px;
+        gap: 15px;
         justify-content: center;
         align-items: center;
         .section-images__slider,
@@ -385,10 +385,31 @@ $colorYellow: #EDFF7E;
     .services__text {
         @include grid-container(1, 335px, 2, 120px, 20px);
     }
+
+
+
+
+
+   
+
+
+
     //BURGER
     .navigation > .navigation__items {
         display: none;
+        list-style-type: none;
+        
+      
     }
+    .navigation__item {
+        padding: 2.7rem;
+    }
+    .item-linck {
+        @include text-styles(700, 2.4rem, 2.9rem, #FFFFFF );
+        
+    }
+        
+        
     .header-wrapper:has(.burger__checkbox:checked) {
         position: fixed;
         top: 0;
@@ -406,6 +427,10 @@ $colorYellow: #EDFF7E;
     }
     .header-wrapper:has(.burger__checkbox:checked) .navigation__items {
         display: block;
+        //
+        // transform: translateX(0%);
+        // transition: transform 5s ease;
+
     }
     .header-wrapper .navigation__items {
         position: fixed;
@@ -414,22 +439,17 @@ $colorYellow: #EDFF7E;
         bottom: 0;
         right: 0;
         background-color: #7067CF;
-        z-index: 3;
+        z-index: 1;
         transform: translateX(-100%);
         padding-top: 40px;
         transition: 0.4s;
+        width: 70%;
+        height: 100vh;
+        padding-top: 8rem;
     }
     .header-wrapper:has(.burger__checkbox:checked) .navigation__items {
         transform: translateX(0%);
         transition: 0.4s;
-    }
-    .header-wrapper:has(.burger__checkbox:checked) .navigation__item::before {
-        content: '';
-        display: block;
-        width: 0.4rem;
-        height: 0.4rem;
-        background-color: #EE3124;
-        // margin: 0 13px 0 20px ; // cсм что- то здесь!!!
     }
     .header-wrapper:has(.burger__checkbox:checked) .navigation__item {
         flex-direction: column;
@@ -437,6 +457,7 @@ $colorYellow: #EDFF7E;
         gap: 32px;
     }
 }
+
             
 
     
