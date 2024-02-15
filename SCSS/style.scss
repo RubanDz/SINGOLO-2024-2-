@@ -33,6 +33,41 @@ $colorYellow: #EDFF7E;
 
 
 
+//TODO! section section__images
+.section__images {
+    background: #7067CF;
+    .section__images-elements {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        .section-images__slider,
+        .icon-arrow-left,
+        .icon-arrow-right {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .section-images__slider {
+            padding: 54px 0 34px 0;
+        }
+    }
+}
+
+   
+   
+    
+
+
+
+
+
+   
+
+
+
+
+
 
 
 
@@ -176,6 +211,7 @@ $colorYellow: #EDFF7E;
         @include grid-container(1, 684px, 2, 120px, 20px);
     }
 }
+
    
        
    
@@ -216,6 +252,7 @@ $colorYellow: #EDFF7E;
     }
 }
             
+
     
   
        
