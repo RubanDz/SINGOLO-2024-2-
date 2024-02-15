@@ -36,7 +36,7 @@ $colorYellow: #EDFF7E;
     display: grid;
     @include grid-container(1, 940px, 2, 60px, 20px);
     @extend %sectionGrid;
-    padding: 60px 0 36px 0;
+    padding: 30px 0 36px 0;
     .services__text-header {
         @include text-styles(900, 3rem, 3.6rem, #000025);
     }
