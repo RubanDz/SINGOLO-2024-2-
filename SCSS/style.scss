@@ -27,11 +27,22 @@ $colorYellow: #EDFF7E;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //TODO! section section__services
-
-
-
-
 .services__text {
     display: grid;
     @include grid-container(1, 940px, 2, 60px, 20px);
@@ -45,31 +56,6 @@ $colorYellow: #EDFF7E;
         text-align: justify;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .grid__container-services {
     @include grid-container(3, 300px, 2, 98px, 20px);
     @extend %sectionGrid;
@@ -187,7 +173,7 @@ $colorYellow: #EDFF7E;
         @include grid-container(2, 342px, 3, 98px, 20px);
     }
     .services__text {
-        @include grid-container(1, 684px, 2, 60px, 20px);
+        @include grid-container(1, 684px, 2, 120px, 20px);
     }
 }
    
