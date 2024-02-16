@@ -2,6 +2,8 @@
 @import './reset';
 $colorWhite: #FFFFFF;
 $colorYellow: #EDFF7E;
+$colorBackgraund-nav: #000025;
+$colorHover: rgb(189, 98, 98);
 %articleSectionFlex {
     display: flex;
     flex-direction: column;
@@ -30,7 +32,7 @@ $colorYellow: #EDFF7E;
 }
 //TODO! HEADER
 .header-wrapper {
-    background-color: #000025;
+    background-color: $colorBackgraund-nav;
     height: 70px;
 }
 //TODO BURGER
@@ -45,14 +47,14 @@ $colorYellow: #EDFF7E;
         justify-content: flex-start;
         position: relative;
         .burger__item {
-            position: relative; //
+            position: relative; 
             width: 25px;
             height: 2.4px;
             background-color: $colorWhite;
-           
         }
     }
 }
+           
 .burger__item::before, 
 .burger__item::after {
     content: '';
@@ -60,19 +62,12 @@ $colorYellow: #EDFF7E;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF;
-    
+    background-color: $colorWhite;
 }
 .burger__item::after {
-    // top: 0;
-    // left: 0;
-    // transform: translateY(100%);
     top: -8px;
 }
 .burger__item::before {
-    // bottom: 0;
-    // left: 0;
-    // transform: translateY(-100%);
     top: 8px;
 }
 .burger__checkbox {
@@ -82,61 +77,20 @@ $colorYellow: #EDFF7E;
     position: absolute;
     opacity: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .navigation {
     display: flex;
     justify-content: flex-start;
     gap: 30px;
-    padding-left: 20px;
-    // justify-content: center;
+    padding-left: 2rem;
     align-items: center;
-    .logo {
+   .logo {
         flex-basis: 30%;
         justify-content:space-around;
         text-transform: uppercase;
         @include text-styles(700, 2.5rem, 3rem, #ffffff);
         position: relative;
         &:hover {
-            color: red;
+            color: $colorHover;
             cursor: pointer;
             transition: .5s;
         }
@@ -159,7 +113,7 @@ $colorYellow: #EDFF7E;
         .navigation__item:first-child .item-linck {
             color: $colorYellow;
             &:hover {
-                color: red;
+                color: $colorHover;
                 cursor: pointer;
                 transition: .5s;
             }
@@ -171,31 +125,6 @@ $colorYellow: #EDFF7E;
         }
     }
 }
-
-
-        
-           
-    
-       
-      
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //TODO! section section__images
 .section__images {
     background: #7067CF;
@@ -231,7 +160,7 @@ $colorYellow: #EDFF7E;
 .grid__container-services {
     @include grid-container(3, 300px, 2, 98px, 20px);
     @extend %sectionGrid;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 .block-services {
     width: 300px;
@@ -254,7 +183,7 @@ $colorYellow: #EDFF7E;
 .grid-container {
     @include grid-container(1, 940px, 3, 40px, 20px);
     @extend %sectionGrid;
-    margin-top: 30px;
+    margin-top: 3rem;
     & > h2 {
         @include text-styles(900, 3rem, 3.6rem, #000025);
     }
@@ -307,27 +236,6 @@ $colorYellow: #EDFF7E;
         }
     }
 }
-
-   
- 
-   
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //TODO! TABLET 850px
 @media screen and (max-width: 850px) {
     .grid-container {
@@ -346,24 +254,6 @@ $colorYellow: #EDFF7E;
         @include grid-container(1, 684px, 2, 120px, 20px);
     }
 }
-
-   
-       
-   
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
 //TODO! MOBILE 450px
 @media screen and (max-width: 450px) {
     .grid-container {
@@ -385,27 +275,11 @@ $colorYellow: #EDFF7E;
     .services__text {
         @include grid-container(1, 335px, 2, 120px, 20px);
     }
-
-
-
-
-
-   
-
-
-
     //BURGER
     .navigation > .navigation__items {
         display: none;
         list-style-type: none;
-        
-      
     }
-
-
- 
-
-
     .navigation__item {
         padding: 2.7rem;
     }
@@ -413,59 +287,56 @@ $colorYellow: #EDFF7E;
         @include text-styles(700, 2.4rem, 2.9rem, #FFFFFF );
         
     }
-        
-        
     .header-wrapper:has(.burger__checkbox:checked) {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 1;
-
     }
     .burger-container {
         display: block;
+        z-index: 3;
+        transition: transform 0.7s ease;
     }
-
+    .logo {
+        z-index: 3;
+    }
+    .header-wrapper:has(.burger__checkbox:checked) .burger-container {
+        transform: rotate(90deg); // здесь
+    }
     .header-wrapper:has(.burger__checkbox:checked) .navigation__items {
         display: block;
-    }
-     
-
+        }
     .header-wrapper .navigation__items {
         position: fixed;
         top: -12px;
         left: 0;
-        bottom: 0;
-        right: 0;
         background-color: #7067CF;
         z-index: 1;
         transform: translateX(-100%);
-        padding-top: 40px;
         transition: 0.4s;
-        width: 70%;
+        width: 70vw;
         height: 100vh;
-        padding-top: 8rem;
-    }
+        padding-top: 15rem;
+      }
     .header-wrapper:has(.burger__checkbox:checked) .navigation__items {
         transform: translateX(0%);
-        transition: 0.4s;
     }
     .header-wrapper:has(.burger__checkbox:checked) .navigation__item {
         flex-direction: column;
         align-items: flex-start;
         gap: 32px;
     }
-    .logo {
-        z-index: 3;
-    }
-    // .burger__item {
-    //     z-index: 3;
-    // }
-    .burger-container {
-        z-index: 3;
-    }
 }
+      
+       
+
+     
+
+       
+ 
+ 
 
             
 
