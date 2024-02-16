@@ -401,6 +401,11 @@ $colorYellow: #EDFF7E;
         
       
     }
+
+
+ 
+
+
     .navigation__item {
         padding: 2.7rem;
     }
@@ -421,20 +426,15 @@ $colorYellow: #EDFF7E;
     .burger-container {
         display: block;
     }
-    .header-wrapper:has(.burger__checkbox:checked) {
-       
-        background-color: #7067CF;
-    }
+
     .header-wrapper:has(.burger__checkbox:checked) .navigation__items {
         display: block;
-        //
-        // transform: translateX(0%);
-        // transition: transform 5s ease;
-
     }
+     
+
     .header-wrapper .navigation__items {
         position: fixed;
-        top: 58px;
+        top: -12px;
         left: 0;
         bottom: 0;
         right: 0;
@@ -455,6 +455,15 @@ $colorYellow: #EDFF7E;
         flex-direction: column;
         align-items: flex-start;
         gap: 32px;
+    }
+    .logo {
+        z-index: 3;
+    }
+    // .burger__item {
+    //     z-index: 3;
+    // }
+    .burger-container {
+        z-index: 3;
     }
 }
 
