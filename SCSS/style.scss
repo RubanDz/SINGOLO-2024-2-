@@ -110,7 +110,7 @@ $colorHover: rgb(189, 98, 98);
         .navigation__item:first-child {
             list-style-type: none;
         }
-        .navigation__item:first-child .item-linck {
+        .navigation__item:first-child .item-link {
             color: $colorYellow;
             &:hover {
                 color: $colorHover;
@@ -118,7 +118,7 @@ $colorHover: rgb(189, 98, 98);
                 transition: .5s;
             }
         }
-        .item-linck {
+        .item-link {
             color: $colorWhite;
             text-decoration: none;
            
@@ -283,9 +283,8 @@ $colorHover: rgb(189, 98, 98);
     .navigation__item {
         padding: 2.7rem;
     }
-    .item-linck {
+    .item-link {
         @include text-styles(700, 2.4rem, 2.9rem, #FFFFFF );
-        
     }
     .header-wrapper:has(.burger__checkbox:checked) {
         position: fixed;
@@ -303,32 +302,34 @@ $colorHover: rgb(189, 98, 98);
         z-index: 3;
     }
     .header-wrapper:has(.burger__checkbox:checked) .burger-container {
-        transform: rotate(90deg); // здесь
+        transform: rotate(90deg); 
     }
     .header-wrapper:has(.burger__checkbox:checked) .navigation__items {
         display: block;
-        }
+    }
     .header-wrapper .navigation__items {
-        position: fixed;
-        top: -12px;
-        left: 0;
-        background-color: #7067CF;
-        z-index: 1;
-        transform: translateX(-100%);
-        transition: 0.4s;
-        width: 70vw;
-        height: 100vh;
-        padding-top: 15rem;
-      }
+    position: fixed;
+    top: -12px;
+    left: 0;
+    background-color: #7067CF;
+    z-index: 1;
+    transform: translateX(-100%);
+    width: 70vw;
+    height: 100vh;
+    padding-top: 15rem;
+    }
     .header-wrapper:has(.burger__checkbox:checked) .navigation__items {
-        transform: translateX(0%);
+    transform: translateX(0%);
     }
     .header-wrapper:has(.burger__checkbox:checked) .navigation__item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
     }
 }
+     
+       
+       
       
        
 
